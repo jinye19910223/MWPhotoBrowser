@@ -148,9 +148,10 @@
             _photoImageView.frame = photoImageViewFrame;
             _photoImageView.contentMode = UIViewContentModeScaleAspectFit;
             self.contentSize = photoImageViewFrame.size;
-
+            self.minimumZoomScale = 1;
+            self.maximumZoomScale = 3;
 			// Set zoom to minimum zoom
-			[self setMaxMinZoomScalesForCurrentBounds];
+//			[self setMaxMinZoomScalesForCurrentBounds];
 			
 		} else  {
 
