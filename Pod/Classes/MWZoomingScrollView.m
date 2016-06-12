@@ -144,11 +144,10 @@
 			_photoImageView.hidden = NO;
 			
 			// Setup photo frame
-			CGRect photoImageViewFrame;
-			photoImageViewFrame.origin = CGPointZero;
-			photoImageViewFrame.size = img.size;
-			_photoImageView.frame = photoImageViewFrame;
-			self.contentSize = photoImageViewFrame.size;
+            CGRect photoImageViewFrame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+            _photoImageView.frame = photoImageViewFrame;
+            _photoImageView.contentMode = UIViewContentModeScaleAspectFit;
+            self.contentSize = photoImageViewFrame.size;
 
 			// Set zoom to minimum zoom
 			[self setMaxMinZoomScalesForCurrentBounds];
